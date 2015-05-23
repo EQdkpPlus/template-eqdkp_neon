@@ -96,6 +96,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+ /* Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome*/
+.fa-inverse{color:#1D1D1D}
+.fa-exclamation-triangle:before{color: #F68506;}
 
  /* icon styles */
 .icon-grey{
@@ -198,11 +201,11 @@ h3 {
 	border-image: none;
 	border-radius: 0px;
 	background-image: linear-gradient(@templateMainColor8, @templateMainColor8), linear-gradient( @templateMainColor8, @templateMainColor9);
-	background-size: 1px 100%;
+	background-size: 2px 100%;
 	background-position: 100% 0px, 0px 0px;
 	background-repeat: no-repeat;
 	transition: all 0.3s ease 0s;
-	border-bottom: 1px solid @templateMainColor9;
+	border-bottom: 2px solid @templateMainColor9;
 }
 
 #personalArea a {
@@ -2384,6 +2387,7 @@ fieldset.settings.floatRight.raid input[type="text"]{
 #bottommenu_chars{
 	height: 70px;
 	clear: both;
+	padding-bottom: 10px;
 }
 .bottommenu_roundedcorner{
 	border-radius: 0px;
@@ -3203,7 +3207,7 @@ ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 }
 
 .dropdown-menu.right-bottom:after {
-	border-top: 6px solid #FFFFFF;
+	border-top: 6px solid #C965EB;
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
 	border-bottom: none;
@@ -3832,7 +3836,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		display: none;
 		margin-bottom: 10px;
 		padding: 10px;
-		background-color: rgba(255,255,255,.95);
+		background-color: @eqdkpBodyBackgroundColor;
 		border-right: 1px solid #bbb;
 		z-index: 999;
 	}
@@ -4338,3 +4342,14 @@ color:#F0F
 @chatNewPostBackgroundColor: fadeout(@templateMainColor4,60);
 @chatBlinkingHeader1: lighten(@chatWindowActiveHeaderBackgroundColor, 15);
 @chatBlinkingHeader2: darken(@chatWindowActiveHeaderBackgroundColor, 10);
+
+/***************************************************
+ *PortalModule Voice
+ **************************************************/
+.voice_portal .portalbox_content { padding: 1px 8px 8px; }
+
+/***************************************************
+ *PortalModule WhoisOnline
+ **************************************************/
+.whoisonline_portal .table { box-shadow: none; }
+.whoisonline_portal .portalbox_content .td, .whoisonline_portal .portalbox_content { padding: 3px 4px; }
