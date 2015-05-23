@@ -581,7 +581,7 @@
 				{PORTAL_BLOCK2}
 				{EQDKP_PLUS_COPYRIGHT}
 				<br>
-			<div class="copyright">Based on desgin by <a target="new" href="http://pbwow.com/">PayBas @ PBWoW.com</a>. All other trademarks are the property of their respected owners.</div><br>
+			<div class="copyright">Based on desgin by <a target="new" rel="nofollow" href="http://pbwow.com/">PayBas @ PBWoW.com</a>. All other trademarks are the property of their respected owners.</div><br>
 				<!-- LISTENER footer_bottom -->
 		</footer><!-- close footer -->
 	</div><!-- close wrapper -->
