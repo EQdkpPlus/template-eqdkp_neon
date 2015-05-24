@@ -667,7 +667,9 @@ div #contentBody2 {
 .mainmenu {
 	font-size: 14px;
 	.templateborder-top;
-
+}
+ul.mainmenu > li {
+	float: left;
 }
 
 ul.mainmenu li a.link_indexphp:before, ul.mainmenu li a.link_entry_home:before {
@@ -2998,7 +3000,9 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	border-radius: 4px 4px 4px 4px;
 	background-color: #FFFFFF;
 }
-
+.awaytt_row{
+	margin: 8px 0px;
+}
 /* Toolbar */
 .toolbar {
 	cursor: pointer;
