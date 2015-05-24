@@ -1697,6 +1697,7 @@ ul.breamcrumb li:first-child a{
 ul.breamcrumb li:first-child a i {
 	font-size: 1.8em;
 	margin-top: -6px;
+	margin-left:0.5em;
 }
 
 ul.breamcrumb a:hover:before{
