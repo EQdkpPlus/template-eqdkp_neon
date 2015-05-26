@@ -423,7 +423,7 @@
 					<!-- LISTENER logo_container -->
 					<div class="clear noheight">&nbsp;</div>
 				</div>
-				{PORTAL_BLOCK1}
+				<aside id="portal-block1">{PORTAL_BLOCK1}</aside>
 				<!-- LISTENER header_bottom -->
 			</div> <!-- close header-->
 		</header>
@@ -578,7 +578,7 @@
 		
 		<footer id="footer">
 				<!-- LISTENER footer_top -->
-				{PORTAL_BLOCK2}
+				<aside id="portal-block2">{PORTAL_BLOCK2}</aside>
 				{EQDKP_PLUS_COPYRIGHT}
 				<br>
 			<div class="copyright">Based on desgin by <a target="new" rel="nofollow" href="http://pbwow.com/">PayBas @ PBWoW.com</a>. All other trademarks are the property of their respected owners.</div><br>

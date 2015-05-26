@@ -1675,6 +1675,7 @@ ul.breamcrumb {
 	font-size: 1em;
 	overflow: hidden;
 	width: 100%;
+	float: left;
 }
 
 ul.breamcrumb li {
