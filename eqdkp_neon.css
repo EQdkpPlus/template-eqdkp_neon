@@ -3150,7 +3150,7 @@ a.tool-item i {
 	color: #666;
 }
 
-#personalArea .dropdown-menu li > a, .rss-tooltip.dropdown-menu li > a {
+#personalArea .dropdown-menu li > a, .rss-tooltip.dropdown-menu li > a, #personalArea .dropdown-menu li > span.nolink {
 	clear: both;
 	color: @eqdkpUserareaFontColor;
 	display: block;
@@ -3162,6 +3162,10 @@ a.tool-item i {
 
 ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 	color: @eqdkpUserareaFontColor;
+}
+
+.user_tooltip_awaymode span.nolink {
+	color: red !important;
 }
 
 .mychars-points-target img {

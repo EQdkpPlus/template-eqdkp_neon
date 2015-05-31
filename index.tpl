@@ -3,7 +3,6 @@
 <!-- ELSE --><!DOCTYPE html>
 <html lang="{L_XML_LANG}">
 	<head>
-
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=9" /><![endif]-->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="{META_KEYWORDS}" />
@@ -36,7 +35,6 @@
 		</style>
 		
 		<script type="text/javascript">
-
 			//<![CDATA[
 			{JS_CODE}
 			
@@ -302,7 +300,7 @@
 						<ul>
 							<li>
 								<div class="user-tooltip-container">
-									<a href="{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}" class="user-tooltip-trigger tooltip-trigger" data-tooltip="user-tooltip"><span class="user-avatar user-avatar-border user-avatar-smallest"><img src="{USER_AVATAR}" alt="{USER_NAME}"/></span> <span class="hiddenSmartphone">{USER_NAME}</span></a>
+									<a href="{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}" class="user-tooltip-trigger tooltip-trigger" data-tooltip="user-tooltip"><span class="user-avatar user-avatar-border user-avatar-smallest"><img src="{USER_AVATAR}" alt="{USER_NAME}"/></span> <span class="hiddenSmartphone">{USER_NAME}<!-- IF USER_IS_AWAY --> <i class="fa fa-suitcase fa-lg"></i><!-- ENDIF --></span></a>
 									<ul class="dropdown-menu user-tooltip" role="menu" id="user-tooltip">
 										<li><a href="{U_USER_PROFILE}">
 												<div class="user-tooltip-avatar">
@@ -318,6 +316,9 @@
 										<!-- BEGIN user_tooltip_addition -->
 										<li class="{user_tooltip_addition.CLASS}">{user_tooltip_addition.TEXT}</li>
 										<!-- END user_tooltip_addition -->
+										<!-- IF USER_IS_AWAY -->
+										<li class="user_tooltip_awaymode"><a href="{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}#fragment-calendar"><i class="fa fa-suitcase fa-lg"></i> {L_calendar_user_is_away}</a></li>
+										<!-- ENDIF -->
 										<li><a href="{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}"><i class="fa fa-cog fa-lg"></i> {L_settings}</a></li>
 										<li><a href="{U_LOGOUT}"><i class="fa fa-sign-out fa-lg"></i> {L_logout}</a></li>
 									</ul>
@@ -423,7 +424,7 @@
 					<!-- LISTENER logo_container -->
 					<div class="clear noheight">&nbsp;</div>
 				</div>
-				<aside id="portal-block1">{PORTAL_BLOCK1}</aside>
+				<div class="portal_block1">{PORTAL_BLOCK1}</div>
 				<!-- LISTENER header_bottom -->
 			</div> <!-- close header-->
 		</header>
@@ -578,7 +579,7 @@
 		
 		<footer id="footer">
 				<!-- LISTENER footer_top -->
-				<aside id="portal-block2">{PORTAL_BLOCK2}</aside>
+				<div class="portal_block1">{PORTAL_BLOCK2}</div>
 				{EQDKP_PLUS_COPYRIGHT}
 				<br>
 			<div class="copyright">Based on desgin by <a target="new" rel="nofollow" href="http://pbwow.com/">PayBas @ PBWoW.com</a>. All other trademarks are the property of their respected owners.</div><br>
