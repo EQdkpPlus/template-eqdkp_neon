@@ -1820,7 +1820,7 @@ ul.breamcrumb li.current  a{
 	font-size: 11px;
 	font-weight: bold;
 	line-height: 20px;
-	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75);
+	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75%);
 	vertical-align: baseline;
 	white-space: nowrap;
 }
@@ -1840,7 +1840,7 @@ ul.breamcrumb li.current  a{
 	font-size: 11px;
 	font-weight: bold;
 	line-height: 20px;
-	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75);
+	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75%);
 	vertical-align: baseline;
 	white-space: nowrap;
 }
@@ -1989,7 +1989,7 @@ border-bottom: 1px solid #Fe00F5;
 .sf-with-ul {padding-top:1em;}
 .sf-ddm li li {
 	background: transparent;
-	color: #4F93B6;
+	color: @eqdkpContentLinkColor;
 	padding: 2px 0;
 }
 
@@ -2009,7 +2009,7 @@ border-bottom: 1px solid #Fe00F5;
 }
 
 .sf-menu.sf-ddm ul {
-	color: #4F93B6;
+	color: @eqdkpContentLinkColor;
 	background: fadeout(@templateMainColor0,5) none repeat scroll 0% 0%;
 	border: 1px solid #C965EB;
 	border-radius: 0px;
@@ -2021,7 +2021,7 @@ border-bottom: 1px solid #Fe00F5;
 }
 
 .sf-menu.sf-ddm ul a, .sf-menu.sf-ddm ul a:hover {
-	color: #4F93B6 !important;
+	color: @eqdkpContentLinkColor !important;
 }
 
 /* Button Drodown-Menu */
@@ -2077,15 +2077,13 @@ border-bottom: 1px solid #Fe00F5;
 
 .sf-btn-ddm li li, .sf-btn-ddm li.sfHover li.sfHover {
 	background: transparent;
-	color: #606060;
+	color: @eqdkpContentLinkColor;
 	padding: 4px 10px 4px 10px;
 }
 
 .sf-btn-ddm li li:hover {
-	background: #ededed;
-	-webkit-border-radius: .5em;
-	-moz-border-radius: .5em;
-	border-radius: .5em;
+	text-shadow: 0px 0px 1em @eqdkpUserareaLinkColorHover;
+	transition: all 0.3s ease 0s;
 }
 
 .sf-btn-ddm li.sfHover {
@@ -2098,23 +2096,20 @@ border-bottom: 1px solid #Fe00F5;
 }
 
 .sf-menu.sf-btn-ddm ul{
-	color: #606060;
-	border: solid 1px #b7b7b7;
-	background: #fff;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
-	background: -moz-linear-gradient(top, #fff, #ededed);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
-	-webkit-border-radius: .5em;
-	-moz-border-radius: .5em;
-	border-radius: .5em;
+	background: fadeout(@templateMainColor0,5) none repeat scroll 0% 0%;
+	border: 2px solid #C965EB;
+	border-radius: 0px;
+	box-shadow: 0px 0px 15px rgba(162, 0, 255, 0.3);
+	color: @eqdkpContentLinkColor;
 	-webkit-box-shadow: 0 1px 2px fadeout(@templateMainColor1,80);
 	-moz-box-shadow: 0 1px 2px fadeout(@templateMainColor1,80);
 	box-shadow: 0 1px 2px fadeout(@templateMainColor1,80);
 	padding: 3px;
+	border-radius: 0px;
 }
 
 .sf-menu.sf-btn-ddm ul a, .sf-menu.sf-btn-ddm ul a:hover {
-	color: #606060 !important;
+	color: @eqdkpContentLinkColor !important;
 }
 
 /* ACP: index, browsers */
@@ -3042,7 +3037,7 @@ a.tool-item i {
 	font-size: 11px;
 	font-weight: bold;
 	line-height: 20px;
-	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75);
+	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75%);
 	vertical-align: baseline;
 	white-space: nowrap;
 }
@@ -3058,7 +3053,7 @@ a.tool-item i {
 	font-size: 11px;
 	line-height: 20px;
 	font-weight: bold;
-	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75);
+	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75%);
 	vertical-align: baseline;
 	white-space: nowrap;
 }
@@ -3075,7 +3070,7 @@ a.tool-item i {
 	font-size: 11px;
 	line-height: 20px;
 	font-weight: bold;
-	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75);
+	text-shadow: 0 -1px 0 fadeout(@templateMainColor0,75%);
 	vertical-align: baseline;
 	white-space: nowrap;
 }
@@ -3104,7 +3099,7 @@ a.tool-item i {
 }
 .dropdown-menu {
 	background-clip: padding-box;
-	color: #4F93B6;
+	color: @eqdkpContentLinkColor;
 	float: left;
 	left: -5px;
 	list-style: none outside none;
@@ -3162,10 +3157,6 @@ a.tool-item i {
 
 ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 	color: @eqdkpUserareaFontColor;
-}
-
-.user_tooltip_awaymode span.nolink {
-	color: red !important;
 }
 
 .mychars-points-target img {
