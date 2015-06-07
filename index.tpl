@@ -489,12 +489,17 @@
 							<!-- IF S_SHOW_COOKIE_HINT -->
 							<div class="infobox infobox-large infobox-blue clearfix">
 								<i class="fa-info-circle fa pull-left fa-2x"></i> {COOKIE_HINT}
+								<i class="fa-times fa pull-right hand" onclick="$(this).parent().hide()"></i>
 							</div>
-							<!-- ENDIF -->	
+							<!-- ENDIF -->
+
 							<!-- BEGIN global_warnings -->
 							<header>
 								<div class="infobox infobox-large infobox-{global_warnings.CLASS} clearfix">
 									<i class="{global_warnings.ICON} fa-4x pull-left"></i> {global_warnings.MESSAGE}
+									<!-- IF global_warnings.S_DISMISS -->
+									<i class="fa-times fa pull-right hand" onclick="$(this).parent().hide()"></i>
+									<!-- ENDIF -->
 								</div>
 							</header>
 							<!-- END global_warnings -->	
@@ -582,7 +587,7 @@
 				<div class="portal_block1">{PORTAL_BLOCK2}</div>
 				{EQDKP_PLUS_COPYRIGHT}
 				<br>
-			<div class="copyright">Based on desgin by <a target="new" rel="nofollow" href="http://pbwow.com/">PayBas @ PBWoW.com</a>. All other trademarks are the property of their respected owners.</div><br>
+			<div class="copyright">Based on design by <a target="new" rel="nofollow" href="http://pbwow.com/">PayBas @ PBWoW.com</a>. All other trademarks are the property of their respected owners.</div><br>
 				<!-- LISTENER footer_bottom -->
 		</footer><!-- close footer -->
 	</div><!-- close wrapper -->
