@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="template" version="0.0.1">
+<install type="template" version="0.0.2">
 	<name>EQdkp Neon</name>
 	<author>Inkraja</author>
 	<authorEmail></authorEmail>
@@ -7,7 +7,7 @@
 	<creationDate>2015-04-26T09:10:38+00:00</creationDate>
 	<copyright>EQDKP</copyright>
 	<license>AGPL v3</license>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<description></description>
 	<folder>eqdkp_neon</folder>
 </install>
