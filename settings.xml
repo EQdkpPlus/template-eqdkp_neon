@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<settings styleversion="0.0.1">	
+<settings styleversion="0.0.2">	
 	<template_path>eqdkp_neon</template_path>
 	<attendees_columns>6</attendees_columns>
 	<logo_position>left</logo_position>
@@ -78,6 +78,22 @@
 	<misc_color1></misc_color1>
 	<misc_color2></misc_color2>
 	<misc_color3></misc_color3>
+	<additional_less>
+		 @templateMainColor0:	#000000; 	/*black*/ 
+		 @templateMainColor1:	#634F9B; 	/*lighter purple 	rgba(99, 79, 155, 1)*/ 
+		 @templateMainColor2:	#0B0117; 	/*like black 		rgba(11, 1, 23, 1)*/
+		 @templateMainColor3:	#009CFF; 	/*blue 			rgba(0, 156, 255, 1)*/
+		 @templateMainColor4:	#00D8FF;	 /*turquoise		rgba(0, 216, 255, 1)*/
+		 @templateMainColor5:	#3B1F4E;	 /*purple			rgba(59, 31, 78, 1)*/
+		 @templateMainColor6:	#C920C7; 	/*pink 			rgba(201, 32, 199, 1)*/
+		 @templateMainColor7:	#112e62; 	/*dark blue		rgba(17, 46, 98, 1)*/
+		 @templateMainColor8:	#14324E; 	/*dark petrol 		rgba(20, 50, 78, 1)*/
+		 @templateMainColor9:	#43286B; 	/*dark purple 		rgba(67, 40, 107, 1)*/
+		 @templateMainColor10: 	#a18baf; 	/* rose			rgba(161, 139, 175, 1)*/
+		 @templateTextShadow: 	@templateMainColor3; /*blue*/
+		 
+		 @templateTagsBackground:	@templateMainColor5;
+		 @templateTagsText:			@eqdkpContentFontColor;
 
-
+	</additional_less>
 </settings>
