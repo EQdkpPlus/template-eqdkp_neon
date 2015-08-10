@@ -726,8 +726,7 @@ input[type=radio], input[type=checkbox]{
 }
 
 .input-icon i, .multilang-switcher {
-	border-radius: 4px 0 0 4px;
-	background-color: @eqdkpContentAccentColor;
+	background-color: fadein(@eqdkpContentAccentColor,5%);
 	border: 1px solid @eqdkpInputBorderColor;
 	line-height: 20px;
 	padding: 4px 8px !important;
@@ -754,12 +753,13 @@ input[type=radio], input[type=checkbox]{
 
 .multilang-dropdown {
 	position: absolute;	
-	background-color: @eqdkpContentAccentColor;
+	background-color: @eqdkpInputBackgroundColor;
+	background-image: linear-gradient(@eqdkpContentAccentColor, @eqdkpContentAccentColor);
 	border: 1px solid @eqdkpInputBorderColor;
-	border-radius: 4px 0px 4px 4px;
 	margin-top: -4px;
 	padding: 4px 8px 0px 8px !important;
 	display: none;
+	z-index:20;
 }
 
 .input-multilang.textarea .multilang-dropdown {
@@ -2811,11 +2811,11 @@ div.error { display: none; }
 }
 
 .comment-reply .comment_container, .comment-reply .comment_write_container {
-	background-color: #efefef;
+	background: fadeout(@templateMainColor5,20);
 }
 
 .comment-reply .comment_container:after {
-	border-color: transparent #efefef;
+	border-color: transparent @templateMainColor5;
 }
 
 
@@ -3250,16 +3250,17 @@ ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 
 blockquote {
 	padding-left: 54px;
-	border: 1px solid fadeout(@templateMainColor10, 55);
+	box-shadow: 0px 0px 10px 2px @templateMainColor9;
 	border-radius: 0px;
 	margin-bottom: 4px;
 	min-height: 28px;
 	position: relative;
-	color: #808080;
+	color: @eqdkpTableThFontColor;
+	background-color:fadeout(@templateMainColor10, 55);
 }
 
 blockquote:before {
-	color: #808080;
+	color: @eqdkpTableThFontColor;
 	content: "\f10d";
 	font-family: FontAwesome;
 	font-size: 28px;
