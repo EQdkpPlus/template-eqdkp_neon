@@ -124,7 +124,7 @@ body {
 }
 
 body.simple-header {
-	background: @eqdkpContainerBackgroundColor;
+	background: @eqdkpContentBackgroundColor;
 	margin: 5px;
 }
 
@@ -374,11 +374,11 @@ div.portal  div.columnContainer .column{
 	min-width:100%;
 	display:inline-block;
 	text-align: left;
-	background: url(images/pink-background.png) no-repeat scroll 50% -180px fadeout(@templateMainColor0,100);
+	background: url(images/pink-background.png) no-repeat scroll 50% -125px fadeout(@templateMainColor0,100);
 	width: 100%;
 	box-shadow: none;
 	z-index: -1;
-	}
+}
 
 .fixed_width #wrapper .portal .second {
 	width: T_PORTAL_WIDTH_WITHOUT_BOTH_COLUMNS !important;
@@ -409,7 +409,8 @@ div.portal  div.columnContainer .column{
 
 #header {
 	text-align:center;
-	min-height:140px;
+	min-height:200px;
+	max-height:200px;
 	background: transparent url(images/triangles.png) no-repeat scroll 49.999% 95%;
 	background-size: 15%;
 	position: relative;
@@ -489,7 +490,7 @@ div.portal  div.columnContainer .column{
 }
 
 div #contentBody2 {
-	background-image: linear-gradient(@eqdkpContentBackgroundColor, fadeout(@eqdkpContentBackgroundColor,1%));
+	background-image: linear-gradient(fadeout(@eqdkpContentBackgroundColor,80%), fadeout(@eqdkpContentBackgroundColor,80%));
 }
 
 /* Sidebar */
@@ -678,12 +679,14 @@ a:hover {
 }
 
 .ui-tabs-panel a, .ui-tabs-panel a:link, .ui-tabs-panel a:active,.ui-tabs-panel a:visited{
-	color: @eqdkpContentLinkColor !important;
+	color: @eqdkpContentFontColorHeadings !important;
 	text-decoration: none;
 }
 
+
 .ui-tabs-panel a:hover {
-	color: darken(@eqdkpContentLinkColorHover,80) !important;
+	color: darken(@eqdkpContentFontColorHeadings,20) !important;
+	text-shadow: 0px 0px 16px @templateMainColor6;
 	text-decoration: none;
 }
 
