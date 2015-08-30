@@ -2509,7 +2509,7 @@ a.attendee_Link:hover{
 	top: 50px;
 	right: 0;
 	display: none;
-	background: fadeout(darken(@templateMainColor1, 20),15%);
+	background: fadeout(darken(@templateMainColor1, 60),15%);
 	.template-border;
 
 	width: 350px;
