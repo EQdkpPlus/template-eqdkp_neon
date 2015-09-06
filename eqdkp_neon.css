@@ -124,7 +124,7 @@ body {
 }
 
 body.simple-header {
-	background: @eqdkpContainerBackgroundColor;
+	background: @eqdkpContentBackgroundColor;
 	margin: 5px;
 }
 
@@ -374,11 +374,11 @@ div.portal  div.columnContainer .column{
 	min-width:100%;
 	display:inline-block;
 	text-align: left;
-	background: url(images/pink-background.png) no-repeat scroll 50% -180px fadeout(@templateMainColor0,100);
+	background: url(images/pink-background.png) no-repeat scroll 50% -125px fadeout(@templateMainColor0,100);
 	width: 100%;
 	box-shadow: none;
 	z-index: -1;
-	}
+}
 
 .fixed_width #wrapper .portal .second {
 	width: T_PORTAL_WIDTH_WITHOUT_BOTH_COLUMNS !important;
@@ -409,7 +409,8 @@ div.portal  div.columnContainer .column{
 
 #header {
 	text-align:center;
-	min-height:140px;
+	min-height:200px;
+	max-height:200px;
 	background: transparent url(images/triangles.png) no-repeat scroll 49.999% 95%;
 	background-size: 15%;
 	position: relative;
@@ -489,7 +490,7 @@ div.portal  div.columnContainer .column{
 }
 
 div #contentBody2 {
-	background-image: linear-gradient(@eqdkpContentBackgroundColor, fadeout(@eqdkpContentBackgroundColor,1%));
+	background-image: linear-gradient(fadeout(@eqdkpContentBackgroundColor,80%), fadeout(@eqdkpContentBackgroundColor,80%));
 }
 
 /* Sidebar */
@@ -678,12 +679,14 @@ a:hover {
 }
 
 .ui-tabs-panel a, .ui-tabs-panel a:link, .ui-tabs-panel a:active,.ui-tabs-panel a:visited{
-	color: @eqdkpContentLinkColor !important;
+	color: @eqdkpContentFontColorHeadings !important;
 	text-decoration: none;
 }
 
+
 .ui-tabs-panel a:hover {
-	color: darken(@eqdkpContentLinkColorHover,80) !important;
+	color: darken(@eqdkpContentFontColorHeadings,20) !important;
+	text-shadow: 0px 0px 16px @templateMainColor6;
 	text-decoration: none;
 }
 
@@ -1785,7 +1788,7 @@ ul.breamcrumb li.current  a{
 }
 	
 .article-container.list-type2 header, .article-container.list-type2 header h3, .article-container.list-type2 p {
-	display: inline !important;
+	display: block !important;
 }
 
 .article-container-wrapper{
@@ -2506,7 +2509,7 @@ a.attendee_Link:hover{
 	top: 50px;
 	right: 0;
 	display: none;
-	background: fadeout(darken(@templateMainColor1, 20),15%);
+	background: fadeout(darken(@templateMainColor1, 60),15%);
 	.template-border;
 
 	width: 350px;
@@ -3712,7 +3715,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		float: none;
 		width: 100%;
 		height: 30px;
-		line-heigt: 22px;
+		line-height: 22px;
 		font-size: 15px;
 	}
 	
@@ -3919,7 +3922,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		margin-right: 0;
 	}
 	
-	.responsive .comment_avatar_container{ 
+	.responsive .comment_avatar_container, .responsive .comment_write_container::after, .responsive .comment_write_container::before, .comment_container::after, .comment_container::before{
 		display: none;
 	}
 	.responsive .comment_container, .responsive #comment_button, .responsive .reply-trigger, .responsive .reply_button, .responsive .comment_write_container {
@@ -3934,7 +3937,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		margin-left: 30px;
 	}
 	
-	.responsive .article_content img:not(.itt-icon):not(.classicon):not(.raceicon):not(.rankicon):not(.talenticon):not(.eventicon):not(.roleicon):not(.gameicon) {
+	.responsive .article_content img:not(.itt-icon):not(.classicon):not(.raceicon):not(.rankicon):not(.talenticon):not(.eventicon):not(.roleicon):not(.gameicon):not(.smilies):not(.eqdkpicon) {
 		width: 100% !important;
 	}
 	
@@ -3976,6 +3979,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive #personalAreaUser .user-avatar-smallest>img {
 		margin-top: 4px;
 	}
+	.responsive .first.column, .responsive .third.column {
+		min-width: 1% !important;
+		max-width: 100% !important;
+	}
 }
 
 @media all and (max-width: 590px) {
@@ -4008,7 +4015,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		float: none;
 		width: 100%;
 		height: 30px;
-		line-heigt: 22px;
+		line-height: 22px;
 		font-size: 15px;
 	}
 	
