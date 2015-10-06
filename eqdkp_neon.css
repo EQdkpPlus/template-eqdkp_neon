@@ -1664,6 +1664,10 @@ div.pagination {
 						linear-gradient(to right, fadeout(@templateMainColor1,75),fadeout(@templateMainColor1,75)),
 						linear-gradient(fadeout(lighten(desaturate(@templateMainColor2,50%),6),50%), fadeout(lighten(spin(@templateMainColor8,15%),4),50%)) !important;
 }
+.noheader .categoryChildSitemap {
+	float: none;
+}
+
 hr#system-readmore {
 	display:none;
 }
@@ -4218,7 +4222,7 @@ li.prio_2 {
   border-radius: 9px;
   color: @eqdkpContentBackgroundColor;
   display: inline-block;
-  font-size: .85rem;
+  font-size: .70rem;
   padding: 1px 6px 1px;
   position: relative;
   text-shadow: none !important;
