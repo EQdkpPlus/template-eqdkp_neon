@@ -4315,15 +4315,18 @@ button.thirdpartylogin.openid {
     font-weight: 100;
 	width: 100%;
     display: block;
+	border-bottom: 1px solid @templateMainColor5;
 }
 
 .bigDateContainer {
 	text-align: center;
 	width: 100px;
-	border-right: 1px solid @eqdkpContentBorderColor;
 	margin-right: 12px;
 	display: block;
 	position: relative;
+	color: @eqdkpContentFontColorHeadings;
+	text-shadow: 0px 0px 16px  @templateTextShadow;
+	letter-spacing: -0.05em;
 }
 .list-type1 .td.bigDateTd, .list-type3 .td.bigDateTd {
 	width: 100px;
