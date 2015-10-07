@@ -441,6 +441,9 @@ div.portal  div.columnContainer .column{
 #logoArea {
 	float:left;
 	text-align:right;
+	& img{
+	max-height:200px;
+	}
 }
 
 #titles {
