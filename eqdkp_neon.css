@@ -4433,9 +4433,9 @@ button.thirdpartylogin.openid {
 	width: .5em;
 	height: 1em;
 	border-radius: .5em 0 0 .5em;
-	background-image: linear-gradient(to right, lighten(@ribbon,1%) 0%, darken(@ribbon,1%) 100%);
+	background-image: linear-gradient(to right, darken(desaturate(@ribbon,100),10) 0%, darken(desaturate(@ribbon,80),30) 100%);
 	box-shadow: 0 .062em 0 rgba(255,255,255,.6);
-		  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+
 }
 .featured .ribbon > span {
 	background: linear-gradient(-90deg, lighten(@featuredColor,20%) 0%, @featuredColor 100%);
