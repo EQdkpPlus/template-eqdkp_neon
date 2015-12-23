@@ -1809,7 +1809,8 @@ ul.breamcrumb li.current  a{
 
 .article-container-wrapper{
 	padding-right: 10px;
-	padding-left: 10px;
+	padding-left: 15px;
+	border-left: 1px solid fadeout(@templateMainColor10,80);
 }
 
 /* ACP: admin menu - update available badge */
