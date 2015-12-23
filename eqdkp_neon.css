@@ -4328,7 +4328,7 @@ button.thirdpartylogin.openid {
 
 .bigDateContainer {
 	text-align: center;
-	width: 98%;
+	width: 100px;
 	margin-right: 12px;
 	display: block;
 	position: relative;
@@ -4452,7 +4452,9 @@ button.thirdpartylogin.openid {
 .featured .ribbon > span:after {
 	background-image: linear-gradient(to right, darken(@featuredColor,10%) 0%, darken(@featuredColor,30%) 100%);
 }
-/* Article Boxes for Calendarentries */
+/***************************************************
+/* Article Boxes for Calendarentries 
+/**************************************************/
 .articleCalendarEventBox {
   display: inline-block;
   max-width: 500px;
@@ -4460,13 +4462,12 @@ button.thirdpartylogin.openid {
   white-space: nowrap;
   background-color: @eqdkpContentContrastBackgroundColor;
   border: 1px solid @eqdkpContentContrastBorderColor;
-  border-radius: 5px;
+  border-radius: 0px;
   color: @eqdkpContentContrastColor;
   margin: 5px;
 }
 
 .articleCalendarEventBox .bigDateContainer {
-	float: left;
 	border-right-color: @eqdkpContentContrastBorderColor;
 }
 
@@ -4490,6 +4491,10 @@ button.thirdpartylogin.openid {
 .articleCalendarEventBox .red, .articleCalendarEventBox .red:hover {
 	color: red !important;;
 }
+.qtip-content.ui-widget-content {
+	border-radius: 3px;
+}
+
 .elfinder .elfinder-navbar {
 	background-color: #131313 !important;
 }
@@ -4583,5 +4588,14 @@ color:#F0F
 .whoisonline_portal .table { box-shadow: none; }
 .whoisonline_portal .portalbox_content .td, .whoisonline_portal .portalbox_content { padding: 3px 4px; }
 
-			.feedposter.feedtype_rss blockquote{
-						background-color: @templateMainColor1 !important;}
+/***************************************************
+ *Plugin Feedposter
+ **************************************************/
+.feedposter.feedtype_rss blockquote{
+	background-color:fadeout(@templateMainColor10, 55) !important;
+}
+.feedposter.feedtype_rss blockquote{
+	border-color: @templateMainColor2 !important;
+	color: @eqdkpTableThFontColor !important;
+}
+.feedposter.feedtype_rss blockquote::before{color: @eqdkpTableThFontColor !important;}
