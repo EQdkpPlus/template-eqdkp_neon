@@ -1612,52 +1612,46 @@ div.pagination {
 
 /* Article Sitemap */
 .articleSitemap, .categoryChildSitemap {
-	border-color: #DDDDDD;
+	border-color: @templateMainColor2;
 	border-image: none;
 	border-style: solid;
 	border-width: 1px 1px 1px 1px;
 	text-decoration: none;
-	background-color: #fff;
+	background-color: @eqdkpContentBackgroundColor;
 	line-height: 20px;
 	margin-left: 10px;
 	margin-bottom: 10px;
 	float: right;
-	border-radius: 4px;
 	min-width: 150px;
 }
 
 .articleSitemap li, .categoryChildSitemap li {
 	padding: 6px 12px;
-	border-bottom: 1px solid #DDDDDD;
+	border-bottom: 1px solid @templateMainColor2;
 }
 
 .articleSitemap li:last-child, .categoryChildSitemap li:last-child {
 	border: none;
-	border-bottom-right-radius: 4px;
-	border-bottom-left-radius: 4px;
-}
-
-.articleSitemap li:first-child, .categoryChildSitemap li:first-child {
-	border-top-right-radius: 4px;
-	border-top-left-radius: 4px;
 }
 
 .articleSitemap li.active {
-	background-color: #F7F7F9;
+	background-color: @eqdkpContentContrastBackgroundColor;
 	cursor: default;
 }
 
 .articleSitemap li.active a {
-	color: #999999;
+	color: @eqdkpContentHighlightColor;
+	text-shadow: 0px 0px 1em @eqdkpContentHighlightColor;
 }
 
 .articleSitemap li:hover, .categoryChildSitemap li:hover {
-	background-color: #F7F7F9;
+	background-color: @eqdkpContentContrastBackgroundColor;
 	cursor: default;
 }
 
 .articleSitemap li:hover a, .categoryChildSitemap li:hover a {
-	color: @templateMainColor0;
+		color: @eqdkpContentHighlightColor;
+	text-shadow: 0px 0px 1em @eqdkpContentHighlightColor;
 }
 .article_detail_container header, .article-container header{
 	padding: 5px 10px;
