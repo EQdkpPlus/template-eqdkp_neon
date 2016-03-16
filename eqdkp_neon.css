@@ -1892,11 +1892,13 @@ ul.breamcrumb li.current  a{
 	margin-top: 0px;
 	text-shadow: 0px 0px 16px @templateMainColor3;
 	letter-spacing: -0.05em;
+	border-bottom: 1px solid transparent;
 }
 .sf-admin li , .mainmenu li{
 	background: @eqdkpMenuBackgroundColor;
 	border-right: 1px solid lighten(@templateMainColor8,10);
 	border-left: 1px solid desaturate(@templateMainColor8, 10);
+	line-height: 14px;
 }
 .sf-admin li li, .mainmenu li li {
 	background: darken(@eqdkpMenuItemBackgroundColor, 10);
