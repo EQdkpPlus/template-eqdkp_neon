@@ -413,7 +413,7 @@ div.portal  div.columnContainer .column{
 	text-align:center;
 	min-height:200px;
 	max-height:200px;
-	background: transparent url(images/triangles.png) no-repeat scroll 49.999% 95%;
+	background: url('@{eqdkpBannerImage}') no-repeat scroll 49.999% 95% transparent;
 	background-size: 15%;
 	position: relative;
 	margin:0px;
@@ -2641,7 +2641,13 @@ a.attendee_Link{
 a.attendee_Link:hover{
 	text-decoration: underline;
 }
-
+.raidcal_warningbox table {
+	border: 2px solid #edc9ce !important;
+}
+.raidcal_warningbox table th {
+	background-color: #F2DEDE;
+	color: red;
+}
 /* calendar: raidevent view - Not signed in Members Bar */
 .notsignedpanel {
 	position: fixed;
@@ -4116,6 +4122,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 
 	.responsive .article_content img:not(.itt-icon):not(.classicon):not(.raceicon):not(.rankicon):not(.talenticon):not(.eventicon):not(.roleicon):not(.gameicon):not(.smilies):not(.eqdkpicon) {
 		width: 100% !important;
+		height: auto !important;
 	}
 
 	.responsive .embed-content div iframe {
