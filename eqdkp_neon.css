@@ -736,7 +736,7 @@ ul.mainmenu a:visited {
 	border-bottom: 1px solid transparent;
 }
 ul.mainmenu a:hover { 
-text-shadow: 0 0 5px @templateMainColor6;
+	text-shadow: 0 0 5px @templateMainColor6;
 }
 ul.mainmenu ul.sub-menu { display: none; position: absolute; top: 100%; left: 0; z-index: 99; white-space: nowrap; }
 ul.mainmenu ul.sub-menu ul.sub-menu { top: 0; left: 100%; }
@@ -744,20 +744,23 @@ ul.mainmenu li:hover > ul.sub-menu {
 	display: block; 
 	background: linear-gradient(fadeout(@eqdkpMenuItemBackgroundColorHover,0%) 5%, fadein(@eqdkpMenuItemBackgroundColorHover,50%) 100%)!important;}
 
-ul.mainmenu .sub-menu-arrow { padding-right: 1.8em; }
+ul.mainmenu .sub-menu-arrow { padding-right: 1.3em; }
 ul.mainmenu .sub-menu-arrow:after { 
-content: ''; height: 0; width: 0; position: absolute; top: 50%; right: 4px; 
-border: 5px solid transparent; }
+	content: ''; height: 0; width: 0; position: absolute; top: 50%; right: 0.6em; 
+	border: 5px solid transparent; }
 ul.mainmenu > li > .sub-menu-arrow:after { border-top-color: rgba(255, 255, 255, 0.5); }
 ul.mainmenu > li:hover > .sub-menu-arrow:after { border-top-color: #FFF; }
-ul.mainmenu ul.sub-menu .sub-menu-arrow:after { margin-top: -3px; border-left-color: rgba(255, 255, 255, 0.5); }
+ul.mainmenu ul.sub-menu .sub-menu-arrow:after { 
+	right: 0.3em;
+	margin-top: -4px; 
+	border-left-color: rgba(255, 255, 255, 0.5); 
+}
 ul.mainmenu ul.sub-menu li:hover > .sub-menu-arrow:after { border-left-color: #FFF; }
 
 body:not(.admin) ul.mainmenu { margin-bottom: .0em; }
 // adminmenu
 ul.adminmenu { 
 	width: 100%; 
-	padding-bottom: .3em; 
 	margin-bottom: .0em; 
 	font-size: 14px; 
 	.templateborder-top;
@@ -807,15 +810,21 @@ ul.adminmenu a:visited { display: block; padding: .75em 1em; color: @eqdkpMenuFo
 ul.adminmenu a:hover {
 text-shadow: 0 0 5px @templateMainColor6;}
 
-ul.adminmenu ul.sub-menu { display: none; position: absolute; top: 100%; left: 0; z-index: 99; white-space: nowrap; }
+ul.adminmenu ul.sub-menu { display: none; position: absolute; top: 100%; left: 0; z-index: 99; white-space: nowrap;
+	min-width: 12em;
+}
 ul.adminmenu ul.sub-menu ul.sub-menu { top: 0; left: 100%; white-space: nowrap; }
 ul.adminmenu li:hover > ul.sub-menu { display: block; }
 
 ul.adminmenu .sub-menu-arrow { padding-right: 1.8em; }
-ul.adminmenu .sub-menu-arrow:after { content: ''; height: 0; width: 0; position: absolute; top: 50%; right: 4px; border: 5px solid transparent; }
+ul.adminmenu .sub-menu-arrow:after { content: ''; height: 0; width: 0; position: absolute; top: 50%; right: 0.6em; border: 5px solid transparent; }
 ul.adminmenu > li > .sub-menu-arrow:after { border-top-color: rgba(255, 255, 255, 0.5); }
 ul.adminmenu > li:hover > .sub-menu-arrow:after { border-top-color: #FFF; }
-ul.adminmenu ul.sub-menu .sub-menu-arrow:after { margin-top: -3px; border-left-color: rgba(255, 255, 255, 0.5); }
+ul.adminmenu ul.sub-menu .sub-menu-arrow:after { 
+	right:0.3em;
+	margin-top: -3px; 
+	border-left-color: rgba(255, 255, 255, 0.5); 
+}
 ul.adminmenu ul.sub-menu li:hover > .sub-menu-arrow:after { border-left-color: #FFF; }
 
 // dropdownmenu
@@ -824,20 +833,20 @@ ul.adminmenu ul.sub-menu li:hover > .sub-menu-arrow:after { border-left-color: #
 .btn-ddm > button:active { top: 0; }
 .btn-ddm > button:after { content: ''; height: 0; width: 0; margin-top: -3px; position: absolute; top: 50%; right: .5em; border: 5px solid transparent; border-top-color: rgba(255, 255, 255, 0.5); }
 .btn-ddm > ul { 
-display: none; 
-position: absolute; 
-top: 2.3em; 
-right: 0; 
-padding: 2px !important; 
-color: #606060; 
+	display: none; 
+	position: absolute; 
+	top: auto; 
+	right: 0; 
+	padding: 2px !important; 
+	color: #606060; 
 	background: fadeout(@templateMainColor0,5) none repeat scroll 0% 0%;
 	border: 1px solid spin(@templateMainColor6, -14%);
 	border-radius: 0px;
 	box-shadow: 0px 0px 15px  fadeout(spin(@templateMainColor6,-22%),70%) ;
 	-webkit-box-shadow: 0px 0px 15px fadeout(spin(@templateMainColor6,-22%),70%);
 	-moz-box-shadow: 0px 0px 15px fadeout(spin(@templateMainColor6,-22%),70%);
-z-index: 99; 
-list-style-type: none !important; 
+	z-index: 99; 
+	list-style-type: none !important; 
 }
 .btn-ddm > ul > li > a { display: block; padding: 4px 20px 4px 5px; white-space: nowrap; text-align: left; }
 .btn-ddm > ul > li > a:hover { text-shadow: 0px 0px 1em #FFF; }
@@ -2401,10 +2410,10 @@ ul.portal_block {
 }
 /* fix for the buttons in modern template */
 .fc-button-group .ui-corner-left {
-	border-radius: 4px 0px 0px 4px;
+	border-radius: 0px;
 }
 .fc-button-group .ui-corner-right {
-	border-radius: 0px 4px 4px 0px;
+	border-radius: 0px;
 }
 .fc-button-group .fc-agendaWeek-button {
 	border-radius: 0;
@@ -2414,7 +2423,10 @@ ul.portal_block {
 }
 
 /* add calendar event*/
-input#selectmode + ul { position: relative; width: 160px; cursor: pointer; }
+input#selectmode + ul { 
+	position: relative; 
+	width: 160px; 
+	cursor: pointer; }
 input#selectmode + ul > li { 
 	padding: 8px 12px; 
 	background-color: @eqdkpInputBackgroundColor; 
@@ -2422,7 +2434,9 @@ input#selectmode + ul > li {
 	box-shadow: 0 1px 1px fadeout(@templateMainColor0,92.5) inset;
 	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 	border-radius: 0px; }
-input#selectmode + ul:hover > li, input#selectmode + ul > li.open { border-color: rgba(82, 168, 236, 0.8); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6); }
+input#selectmode + ul:hover > li, input#selectmode + ul > li.open { 
+	border-color: rgba(82, 168, 236, 0.8); 
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6); }
 
 input#selectmode + ul > li:after { 
 	display: block; 
@@ -2433,12 +2447,30 @@ input#selectmode + ul > li:after {
 	right: 12px; 
 	border: 8px solid transparent;
 	border-top-color: @eqdkpInputBorderColor; }
-input#selectmode + ul > li.open:after { top: 10%; border-top-color: transparent; border-bottom-color: @eqdkpInputBorderColor; }
+input#selectmode + ul > li.open:after { 
+	top: 10%; 
+	border-top-color: transparent; 
+	border-bottom-color: @eqdkpInputBorderColor; }
 
-input#selectmode + ul > li + ul { display: none; height: auto; margin-top: -2px; position: absolute; top: auto; left: 0; right: 0; z-index: 99; background: @eqdkpInputBackgroundColor; border: 1px solid @eqdkpInputBorderColor; border-top: 1px solid @eqdkpInputBorderColor; border-radius: 0 0 3px 3px; box-shadow: 2px 3px 5px rgba(0, 0, 0, .25) }
-input#selectmode + ul > li.open + ul { display: block; }
-input#selectmode + ul > li + ul > li { padding: 8px 12px; }
-input#selectmode + ul > li + ul > li:hover { color: @eqdkpInputFontColorActive;	text-shadow: 0px 0px 16px  @templateTextShadow; }
+input#selectmode + ul > li + ul { 
+	display: none; height: auto; 
+	margin-top: -2px; 
+	position: absolute; 
+	top: auto; left: 0; 
+	right: 0; 
+	z-index: 99; 
+	background: @eqdkpInputBackgroundColor; 
+	border: 1px solid @eqdkpInputBorderColor; 
+	border-top: 1px solid @eqdkpInputBorderColor; 
+	border-radius: 0 0 3px 3px; 
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, .25) }
+input#selectmode + ul > li.open + ul { 
+	display: block; }
+input#selectmode + ul > li + ul > li { 
+padding: 8px 12px; }
+input#selectmode + ul > li + ul > li:hover { 
+	color: @eqdkpInputFontColorActive;	
+	text-shadow: 0px 0px 16px  @templateTextShadow; }
 
 fieldset.settings.floatRight.raid dl {
 	margin-bottom: 0px;
