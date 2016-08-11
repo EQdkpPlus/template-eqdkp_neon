@@ -47,8 +47,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video,
 table.table, .table caption, .table tbody, .table tfoot, .table thead, .table tr, .table th, .table td,
@@ -61,7 +61,7 @@ table.table, .table caption, .table tbody, .table tfoot, .table thead, .table tr
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -309,7 +309,7 @@ opacity:1;
 	border-collapse: collapse;
 	display: table;
 	width: 100%;
-	border-top: 2px solid  @templateMainColor5;	
+	border-top: 2px solid  @templateMainColor5;
 	background: darken(@templateMainColor8,15);
 	background-color: fadeout(@eqdkpBodyBackgroundColor,30%);
 	background-image: linear-gradient(fadeout(@templateMainColor5,50), fadeout(@templateMainColor4,50)), linear-gradient(fadeout(@templateMainColor5,50), fadeout(@templateMainColor4,50));
@@ -396,7 +396,7 @@ div.portal  div.columnContainer .column{
 }
 
 .fixed_width.frontend table.scrollable-x {
-	table-layout: fixed;	
+	table-layout: fixed;
 }
 
 .fixed_width.frontend table.scrollable-x tbody {
@@ -543,7 +543,7 @@ div #contentBody2 {
 }
 #contentFooter .dropdown-menu, #contentFooter .dropdown-menu a {
 	color: @eqdkpBodyFontColor;
-}	
+}
 #contentFooter div.floatRight{margin-top:0px;}
 .debug {
 	margin: 5px;
@@ -767,7 +767,7 @@ input[type=radio], input[type=checkbox]{
 }
 
 .multilang-dropdown {
-	position: absolute;	
+	position: absolute;
 	background-color: @eqdkpInputBackgroundColor;
 	background-image: linear-gradient(@eqdkpContentAccentColor, @eqdkpContentAccentColor);
 	border: 1px solid @eqdkpInputBorderColor;
@@ -878,7 +878,7 @@ select[readonly], textarea[readonly], input[type="text"][readonly], input[type="
 	cursor: not-allowed;
 }
 
-/* color styles 
+/* color styles
 ---------------------------------------------- */
 
 /* black */
@@ -1137,7 +1137,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	width: 100%;
 }
 .tr { display: table-row;}
-.td { 
+.td {
 	display: table-cell;
 	padding: 2px;
 }
@@ -1228,7 +1228,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	position:relative;
 	margin:0;
 	padding:1px;
-}			
+}
 .markImageResized{
 	width:32px;
 	height:32px;
@@ -1671,7 +1671,8 @@ hr#system-readmore {
 	display:none;
 }
 
-ul.breadcrumb {
+ul.breadcrumb,
+ul.breamcrumb {
 	color: darken(desaturate(@templateMainColor6,40),15);
 	font-size: 1em;
 	overflow: hidden;
@@ -1679,12 +1680,14 @@ ul.breadcrumb {
 	float: left;
 }
 
-ul.breadcrumb li {
+ul.breadcrumb li,
+ul.breamcrumb li {
 	float: left;
 	position: relative;
 }
 
-ul.breadcrumb a {
+ul.breadcrumb a,
+ul.breamcrumb a {
 	padding: 1em 0em 1em 1em;
 	display: block;
 	text-decoration: none;
@@ -1695,32 +1698,39 @@ ul.breadcrumb a {
 	margin-right:2em;
 }
 
-ul.breadcrumb li:first-child a{
+ul.breadcrumb li:first-child a,
+ul.breamcrumb li:first-child a {
 	padding-left: 0em;
 }
 
-ul.breadcrumb li:first-child a i {
+ul.breadcrumb li:first-child a i,
+ul.breamcrumb li:first-child a i {
 	font-size: 1.8em;
 	margin-top: -6px;
 	margin-left:0.5em;
 }
 
-ul.breadcrumb a:hover:before{
+ul.breadcrumb a:hover,
+ul.breamcrumb a:hover {
 	border-bottom-color: @templateMainColor6;
 }
 
 ul.breadcrumb a::after,
-ul.breadcrumb a::before{
+ul.breamcrumb a::after,
+ul.breadcrumb a::before,
+ul.breamcrumb a::before {
 	content: "";
 	position: absolute;
 	right: -1em;
 }
 
-ul.breadcrumb a::after{
+ul.breadcrumb a::after,
+ul.breamcrumb a::after {
 	z-index: 2;
 }
 
-ul.breadcrumb a:before{
+ul.breadcrumb a::before,
+ul.breamcrumb a::before {
 	right: -2em;
 	z-index: 1;
 	content: '\f054';
@@ -1730,28 +1740,35 @@ ul.breadcrumb a:before{
 	font-weight: normal;
 }
 
-ul.breadcrumb a:hover{
+ul.breadcrumb a:hover::after,
+ul.breamcrumb a:hover::after {
 	color: @templateMainColor6;
 }
 
 ul.breadcrumb .current,
-ul.breadcrumb .current:hover{
+ul.breamcrumb .current,
+ul.breadcrumb .current:hover,
+ul.breamcrumb .current:hover {
 	font-weight: bold;
 	background: none;
 	border-bottom: 1px dotted darken(desaturate(@templateMainColor6,40),15);
 }
 
-ul.breadcrumb .current ::after,
-ul.breadcrumb .current ::before{
+ul.breadcrumb .current::after,
+ul.breamcrumb .current::after,
+ul.breadcrumb .current::before,
+ul.breamcrumb .current::before {
 	content: normal;
 }
 
-ul.breadcrumb li.current  a{
+ul.breadcrumb li.current a,
+ul.breamcrumb li.current a {
 	margin-right:0.5em;
 	margin-left:-0.5em;
 }
 
-.breadcrumb-container {
+.breadcrumb-container,
+.breamcrumb-container {
 	margin-bottom: 8px;
 }
 
@@ -2115,7 +2132,7 @@ border-bottom: 1px solid @templateMainColor6;
 .browser-icon svg {
 	width:24px;
 	height:24px;
-	fill:@eqdkpBodyFontColor; 
+	fill:@eqdkpBodyFontColor;
 }
 
 /* ACP: index, rss notifications */
@@ -2168,7 +2185,7 @@ border-bottom: 1px solid @templateMainColor6;
 }
 
 /* ACP: manage menues */
-.manage_menues_block { 
+.manage_menues_block {
 	list-style-type: none; padding: 3px; margin:6px; border:1px dashed darken(@eqdkpInputBorderColorActive,40); min-width:180px;
 }
 .manage_menues_block2 {
@@ -2181,10 +2198,10 @@ border-bottom: 1px solid @templateMainColor6;
 .manage_menues_block li, .manage_menues_block2 li {
 	list-style-type: none;
 	padding: 5px;
-	margin:5px; 
-	background-color:@eqdkpInputBackgroundColor; 
+	margin:5px;
+	background-color:@eqdkpInputBackgroundColor;
 	border:1px solid @eqdkpInputBorderColorActive;
-	cursor:pointer; 
+	cursor:pointer;
 	color:@eqdkpInputFontColorActive;
 }
 
@@ -2277,13 +2294,13 @@ ul.portal_block {
 	min-height: 20px;
 }
 
-.portal_block li { 
+.portal_block li {
 	list-style-type: none;
 	padding: 10px;
 	margin:10px;
 	cursor:move;
 }
-.portal_block_light { 
+.portal_block_light {
 	list-style-type: none;
 	padding: 5px;
 	margin:10px;
@@ -2624,7 +2641,7 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 	font-weight: bold;
 }
 
-table.guesttable { 
+table.guesttable {
 	padding: 5px;
 	border: 1px solid  @templateMainColor5;
 	background: fadeout(@templateMainColor5,80) ;
@@ -3512,7 +3529,7 @@ margin-bottom:50px;
 	color:@templateTagsText;
 	text-decoration:none;
 	-moz-border-radius-bottomright:4px;
-	-webkit-border-bottom-right-radius:4px;	
+	-webkit-border-bottom-right-radius:4px;
 	border-bottom-right-radius:4px;
 	-moz-border-radius-topright:4px;
 	-webkit-border-top-right-radius:4px;
@@ -3758,7 +3775,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
     background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: left top;
-	z-index: 0;	
+	z-index: 0;
 	}
 	.reponsiveTestClass {text-align:center;}
 	
@@ -3857,7 +3874,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		height: auto !important;
 	}
 		
-	.responsive .mce-toolbar[role="menubar"] { 
+	.responsive .mce-toolbar[role="menubar"] {
 		display: none;
 	}
 	
@@ -3882,30 +3899,42 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		float: none;
 	}
 	
-	.responsive .breadcrumb li, .responsive .breadcrumb li a:after, .responsive .breadcrumb li a:before {
+	.responsive .breadcrumb li,
+	.responsive .breamcrumb li,
+	.responsive .breadcrumb li a:after,
+	.responsive .breamcrumb li a:after,
+	.responsive .breadcrumb li a:before,
+	.responsive .breamcrumb li a:before {
 		display: none;
 	}
 	
-	.responsive .breadcrumb li:first-child, .responsive .breadcrumb li:nth-last-of-type(2) {
+	.responsive .breadcrumb li:first-child,
+	.responsive .breamcrumb li:first-child,
+	.responsive .breadcrumb li:nth-last-of-type(2),
+	.responsive .breamcrumb li:nth-last-of-type(2) {
 		display: inline;
 	}
 	
-	.responsive .breadcrumb li:first-child a {
+	.responsive .breadcrumb li:first-child a,
+	.responsive .breamcrumb li:first-child a {
 		border-right: 1px solid fadeout(@templateMainColor10, 55);
 		padding-right: 8px;
 		line-height: 27px;
 		padding-left: 8px !important;
 	}
 	
-	.responsive .breadcrumb li {
+	.responsive .breadcrumb li,
+	.responsive .breamcrumb li {
 		font-size: 14px;
 	}
 	
-	.responsive .breadcrumb li:nth-last-of-type(2) a {
+	.responsive .breadcrumb li:nth-last-of-type(2) a,
+	.responsive .breamcrumb li:nth-last-of-type(2) a {
 		padding-left: 22px;
 	}
 	
-	.responsive .breadcrumb li:nth-last-of-type(2) a:before {
+	.responsive .breadcrumb li:nth-last-of-type(2) a:before,
+	.responsive .breamcrumb li:nth-last-of-type(2) a:before {
 		content:"\f060";
 		display:inline;
 		border: none;
@@ -3918,7 +3947,8 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		font-family: "FontAwesome";
 	}
 	
-	.responsive .breadcrumb li:first-child a:before {
+	.responsive .breadcrumb li:first-child a:before,
+	.responsive .breamcrumb li:first-child a:before {
 		display: none;
 	}
 	
@@ -4034,7 +4064,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 	
 	.responsive table.scrollable-x {
-		table-layout: fixed;	
+		table-layout: fixed;
 	}
 
 	.responsive table.scrollable-x tbody {
@@ -4132,7 +4162,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive .first.column, .responsive .third.column {
 		min-width: 1% !important;
 		max-width: 100% !important;
-	}	
+	}
 	.responsive .bigDateTd {
 		display: none;
 	}
@@ -4236,7 +4266,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	background-position: 10px center;
 	margin: 10px 0px;
 	display:block;
-	min-height: 32px;	
+	min-height: 32px;
 }
 .errorbox div span, .greenbox div span, .bluebox div span{
 	padding: 0px 0px 0px 0px;
@@ -4498,7 +4528,7 @@ button.thirdpartylogin.openid {
 	margin-left: 10px;
 }
 /***************************************************
-/* Ribbons 
+/* Ribbons
  **************************************************/
 @ribbon: @eqdkpContentFontColorHeadings;
 @featuredColor: @templateMainColor4;
@@ -4512,7 +4542,7 @@ button.thirdpartylogin.openid {
 }
 .ribbon span {
   	position: relative;
-	display: block;	
+	display: block;
 	text-align: center;
 	bottom: 0em;
 	left: 0;
@@ -4578,7 +4608,7 @@ button.thirdpartylogin.openid {
 	background-image: linear-gradient(to right, darken(@featuredColor,10%) 0%, darken(@featuredColor,30%) 100%);
 }
 /***************************************************
-/* Article Boxes for Calendarentries 
+/* Article Boxes for Calendarentries
 /**************************************************/
 .articleCalendarEventBox {
   display: inline-block;
@@ -4657,7 +4687,7 @@ button.thirdpartylogin.openid {
 
 [class*="raidstatushead"]{
 	font-size:100%;
-	text-transform:uppercase; 
+	text-transform:uppercase;
 	margin-left:0.1em;
 }
 [class*="raidstatushead"]::before {
@@ -4684,7 +4714,7 @@ color:#F0F
 @chatWindowBorder: @templateMainColor10;
 @chatWindowColor: @eqdkpContentFontColor;
 @chatWindowBackgroundColor: fadeout(@templateMainColor2,10);
-@chatWindowHeaderBackgroundColor: @eqdkpContentBackgroundColor; 
+@chatWindowHeaderBackgroundColor: @eqdkpContentBackgroundColor;
 @chatWindowHeaderColor: @eqdkpContentFontColorHeadings;
 @chatWindowInactiveBackgroundColor: darken(@chatWindowActiveHeaderBackgroundColor,40);
 @chatWindowActiveHeaderBackgroundColor: @templateMainColor6;
