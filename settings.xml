@@ -96,6 +96,7 @@
 		 
 		 @templateTagsBackground:	@templateMainColor5;
 		 @templateTagsText:			@eqdkpContentFontColor;
-
+		@styleCalendarStateColor : false;
+		@styleCalenderGameStyle : true;
 	</additional_less>
 </settings>
