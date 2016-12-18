@@ -1399,48 +1399,6 @@ div[aria-describedby="dialog-login"] .password-forgot{
 }
 
 /* jQuery UI adjustments */
-.ui-dialog .ui-widget-header {
-	color: #ECFFFF;
-	background-image: linear-gradient(fadeout( @templateMainColor1,75), @templateMainColor2), linear-gradient(fadeout( @templateMainColor1,75), @templateMainColor2), linear-gradient(to right, fadeout( @templateMainColor1,75), fadeout( @templateMainColor1,75)), linear-gradient(fadeout(lighten(desaturate(@templateMainColor2,50%),6),50%), fadeout(lighten(spin(@templateMainColor8,15%),4),50%));
-	background-size: 1px 100%, 1px 100%, 100% 1px, 100% 100%;
-	background-position: 0px 1px, 100% 1px, 0px 0px, 0px 0px;
-	background-repeat: no-repeat, no-repeat, no-repeat, repeat;
-	background-clip: border-box;
-	background-origin: border-box;
-	border-color: transparent transparent @templateMainColor2;
-	box-shadow: 0px 0px 3px 1px fadeout(@templateMainColor0,20) inset;
-
-
-	border-radius: 0px !important;
-	border-top: 0px;
-	border-left: 0px;
-	border-right: 0px;
-
-	font-family: 'Trebuchet MS',Arial,sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	margin-bottom: 10px;
-	padding-bottom: 5px;
-}
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default,
-.ui-button,html .ui-button.ui-state-disabled:hover,html .ui-button.ui-state-disabled:active{
-	border: 1px solid lighten(@templateMainColor0,20);
-	background: fadeout(@templateMainColor0,60) none repeat scroll 0% 0%;
-	border-color: fadeout(@templateMainColor10,55) fadeout(@templateMainColor10,55 fadeout(@templateMainColor10,40);
-	border-bottom: 1px solid fadeout(@templateMainColor10,86);
-	border-top: 1px solid fadeout(@templateMainColor10,55);
-}
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active {
-	border-color: fadeout(@templateMainColor10,55) fadeout(@templateMainColor10,55 fadeout(@templateMainColor10,40);
-	border-bottom: 1px solid fadeout(@templateMainColor10,86);
-	border-top: 1px solid fadeout(@templateMainColor10,55);
-	background: fadeout(@templateMainColor5,55%) 50% 50% repeat-x;
-}
-
 
 .ui-tabs ul.ui-tabs-nav {
 	background: none !important;
@@ -1449,26 +1407,6 @@ div[aria-describedby="dialog-login"] .password-forgot{
 	border-left: 0px;
 	border-right: 0px;
 }
-
-.ui-widget {
-	font-size: 1.0em !important;
-	font-family: Tahoma, Arial, sans-serif;
-	border-top: 2px solid @templateMainColor5;
-	background: darken(@templateMainColor8,15);
-	background-color: fadeout(@eqdkpBodyBackgroundColor,30%);
-	background-image: linear-gradient(fadeout(@templateMainColor5,50), fadeout(@templateMainColor4,50)), linear-gradient(rgba(59, 31, 78, 0.5), fadeout(@templateMainColor4,50));
-	background-size: 2px 100%;
-	background-position: 100% 0, 0 0;
-	background-repeat: no-repeat;
-	border-radius: 0;
-	border-bottom: 1px solid @templateMainColor4;
-}
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
-	.template-border;
-	background: darken(@templateMainColor1,15);
-	color: @eqdkpBodyFontColor;
-}
-
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor { min-height:1.7em; } /* Fixes for update badges */
 
 .sf-admin > li > a{ min-height: 1.4em; } /* Fixes for update badges */
@@ -2083,7 +2021,7 @@ ul.portal_block {
 .style input[type="radio"] {
 	opacity: 0;
 }
-.style input[type="radio"]  label {
+.style input[type="radio"] + label {
 	display: block;
 	width: 16px;
 	height: 16px;
@@ -2096,7 +2034,7 @@ ul.portal_block {
 	cursor: pointer;
 	z-index: 1;
 }
-.style input[type="radio"]  label:hover:before {
+.style input[type="radio"] + label:hover:before {
 	content: '';
 	width: 10px;
 	height: 10px;
@@ -2106,7 +2044,7 @@ ul.portal_block {
 	border-radius: 1px;
 	background: @eqdkpButtonBackgroundColorHover;
 }
-.style input[type="radio"]:checked  label:before {
+.style input[type="radio"]:checked + label:before {
 	content: '';
 	width: 10px;
 	height: 10px;
@@ -2218,7 +2156,6 @@ ul.portal_block {
 .fc-title{
 	vertical-align: middle;
 }
-/* fix for the buttons in modern template */
 .fc-button-group .ui-corner-left {
 	border-radius: 0px;
 }
@@ -2521,31 +2458,23 @@ color:#F0F
 	&_2 .state_header { .state_theme(2); }
 	&_3 .state_header { .state_theme(3); }
 }
-
-.check_game_support() when(@eqdkpGame = "wow") and(@styleCalenderGameStyle){
-	
-	.change_attendee_box(@i:1) when(@i <= length(@eqdkpGameClasses)){
-		@id		: extract(extract(@eqdkpGameClasses, @i), 1);
-		@name	: extract(extract(@eqdkpGameClasses, @i), 2);
-		@color	: extract(extract(@eqdkpGameClasses, @i), 3);
-		.is_color() when(iscolor(@color)){
-			
-			.class_colorized .attendee_box[data-class-id="@{id}"] {
-				background: url('@{eqdkpTemplateImagePath}/@{eqdkpGame}_classes/@{id}.png') no-repeat scroll ~"12% 0% / 25px auto" transparent;
-				border: 1px solid fade(@color, 50);
-				box-shadow: 0px 0px 6px 6px fade(@color, 30) inset;
-				// transition: backround .2s ease-in;
-			}
-			.class_colorized .attendee_box[data-class-id="@{id}"] .attendee_name img { visibility: hidden; }
-			
-		}.is_color();
+.change_attendee_box(@i:1) when(@i <= length(@eqdkpGameClasses)){
+	@id	: extract(extract(@eqdkpGameClasses, @i), 1);	// read the first element -- class id
+	@name	: extract(extract(@eqdkpGameClasses, @i), 2);	// read the scnd element --- class name
+	@color	: extract(extract(@eqdkpGameClasses, @i), 3);	// read the thrd element --- class color
+	.is_color() when(iscolor(@color)){			// skip, if class color is empty
 		
-		.change_attendee_box(@i + 1);
-	}.change_attendee_box();
-	
+		// start of css
+		.attendee_box.class_@{id} {
+			background: url('games/@{eqdkpGame}/classes/@{id}.png') no-repeat scroll ~"12% 0% / 25px auto" transparent;
+			border: 1px solid fade(@color, 50);
+			box-shadow: 0px 0px 6px 6px fade(@color, 30) inset;
+		}
+		// end of css
+		
+	}.is_color();
+	.change_attendee_box(@i+1); //next class entry
 }
-.check_game_support();	
-
 
 /* calendar: raidevent view - Not signed in Members Bar */
 .notsignedpanel {
