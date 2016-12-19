@@ -865,17 +865,6 @@ a:hover {
 	text-decoration: none;
 }
 
-.ui-tabs-panel a, .ui-tabs-panel a:link, .ui-tabs-panel a:active,.ui-tabs-panel a:visited{
-	color: @eqdkpContentFontColorHeadings !important;
-	text-decoration: none;
-}
-
-
-.ui-tabs-panel a:hover {
-	color: darken(@eqdkpContentFontColorHeadings,20) !important;
-	text-shadow: 0px 0px 16px @templateMainColor6;
-	text-decoration: none;
-}
 
 /* Inputs */
 
@@ -1407,47 +1396,7 @@ div[aria-describedby="dialog-login"] .password-forgot{
 	border-left: 0px;
 	border-right: 0px;
 }
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor { min-height:1.7em; } /* Fixes for update badges */
 
-.sf-admin > li > a{ min-height: 1.4em; } /* Fixes for update badges */
-
-#contentBody .ui-tabs th.footer {
-/*	background-color: #fff !important;*/
-}
-
-.confirm_content ul{
-	list-style-type: square;
-	padding: 10px;
-}
-
-.confirmdialog li{
-	margin-left: 30px;
-	list-style: square inside none;
-}
-
-.ui-tabs.ui-widget-content {
-	background-color: fadeout(@templateMainColor0,60);
-	background-image: linear-gradient(fadeout(@templateMainColor10, 55), fadeout(@templateMainColor10, 85)), linear-gradient(fadeout(@templateMainColor10, 55), fadeout(@templateMainColor10, 85));
-	background-position: 0px 0px, 100% 0px;
-	background-repeat: no-repeat;
-	background-size: 1px 100%;
-	border-width: 1px medium;
-	border-style: solid none;
-	border-color: fadeout(@templateMainColor10, 55) -moz-use-text-color fadeout(@templateMainColor10, 85);
-	-moz-border-top-colors: none;
-	-moz-border-right-colors: none;
-	-moz-border-bottom-colors: none;
-	-moz-border-left-colors: none;
-	border-image: none;
-	box-shadow: 0px 0px 5px fadeout(@templateMainColor0,30);
-	border-bottom: 1px solid  fadeout(@templateMainColor10,85%);
-	border-top: 1px solid fadeout(@templateMainColor10,55%);
-}
-
-.sortable li.mjs-nestedSortable-leaf div, .sortable li div,.sortable li.mjs-nestedSortable-branch div{
-	background: linear-gradient(to bottom,  lighten(@eqdkpContentBackgroundColor,10) 0%, @eqdkpContentBackgroundColor 47%, darken(@eqdkpContentBackgroundColor,20) 100%);
-	.template-border;
-}
 
 /* general: information boxes NEW */
 .infobox {
@@ -2382,7 +2331,7 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 	.state_guests	{ color:lighten(@eqdkpContentFontColor,20); font-size:80%; font-weight:normal;}
 
 	.class_table							{ display:flex; flex-wrap:wrap; justify-content:space-between; margin-bottom:5px; }
-	.class_column							{ display:flex; flex-direction:column; min-width:200px; margin-bottom:5px; padding-bottom:4px; white-space:nowrap; background:lighten(@eqdkpContentBackgroundColor,20); border:1px solid @eqdkpContentBorderColor; }
+	.class_column							{ display:flex; flex-direction:column; min-width:200px; margin-bottom:5px; padding-bottom:4px; white-space:nowrap; background: fadeout(darken(@templateMainColor1, 20),25%); border:1px solid @eqdkpContentBorderColor; }
 	.class_column[data-attendee-count="0"]	{ opacity: .3; }
 
 	/* column header */
@@ -2401,7 +2350,7 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 	.attendee_info .fa-info	{ padding-right:5px; }
 
 	/* guest */
-	.guest_box						{ display:flex; justify-content:space-between; margin:4px 4px 0; background:@eqdkpContentBackgroundColor; border:1px solid @eqdkpContentBorderColor; border-radius:4px; order:2; }
+	.guest_box						{ display:flex; padding:2px; justify-content:space-between; margin:4px 4px 0; background:@eqdkpContentBackgroundColor; border:1px solid @eqdkpContentBorderColor; border-radius:0px; order:2; }
 	.guest_name						{ flex:2 1 100%; overflow:hidden; text-overflow:ellipsis; }
 	.guest_name img					{ margin-top:-4px; }
 	.guest_info						{ flex:1 0 auto; font-size:10px; overflow:hidden; }
@@ -2411,40 +2360,11 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 	/* drag & drop */
 	.ui-draggable			{ cursor:move; }
 	.ui-draggable-dragging	{ position:absolute !important; border:1px dotted @eqdkpContentPositiveColor; z-index:1; }
-	.ui-droppable-active	{ opacity:1 !important; min-height:60px; background:fadeout(@eqdkpContentHighlightColor,20%); }
+	.ui-droppable-active	{ opacity:1 !important; min-height:60px; background:lighten(@templateMainColor8,0); }
 }
 /***************************************************
 /*Changes for custom tmpl raidacalview
  **************************************************/
-/*[class*="attendee_box"]{
-	box-shadow: inset 0px 0px 5px 0px;
-	border:1px solid;
-}
-[class*="attendee_box"]:hover{
-	box-shadow: inset 0px 0px 5px 0px @templateTextShadow;
-	border:1px solid @templateTextShadow;
-}
-.state_header{
-	color:inherit;
-	font-size:2em;
-	text-transform:uppercase;
-	font-size: 1.5em;
-letter-spacing: -0pt;
- }
-
-#viewraidcal_colapse_0.attendee_table h4{
-color:#0F0
-}
-#viewraidcal_colapse_1.attendee_table h4{
-color:#FF0
-}
-#viewraidcal_colapse_2.attendee_table h4{
-color:#F00
-}
-#viewraidcal_colapse_3.attendee_table h4{
-color:#F0F
-}
-*/
 
 #viewraidcal_colapse /*when(@styleCalendarStateColor)*/{
 	@styleState_0: rgb(96, 255, 0);
@@ -2458,23 +2378,48 @@ color:#F0F
 	&_2 .state_header { .state_theme(2); }
 	&_3 .state_header { .state_theme(3); }
 }
-.change_attendee_box(@i:1) when(@i <= length(@eqdkpGameClasses)){
-	@id	: extract(extract(@eqdkpGameClasses, @i), 1);	// read the first element -- class id
-	@name	: extract(extract(@eqdkpGameClasses, @i), 2);	// read the scnd element --- class name
-	@color	: extract(extract(@eqdkpGameClasses, @i), 3);	// read the thrd element --- class color
-	.is_color() when(iscolor(@color)){			// skip, if class color is empty
+.check_game_support() when(@styleCalenderGameStyle){
+	//Member Box
+	.change_attendee_box(@i:1) when(@i <= length(@eqdkpGameClasses)){
+		@id		: extract(extract(@eqdkpGameClasses, @i), 1);
+		@name	: extract(extract(@eqdkpGameClasses, @i), 2);
+		@color	: extract(extract(@eqdkpGameClasses, @i), 3);
+		.is_color() when(iscolor(@color)){
+			
+			.class_colorized .attendee_box[data-class-id="@{id}"] {
+				border: 1px solid fade(@color, 100);
+				box-shadow: 0px 0px 5px 5px fade(@color, 80) inset;
+				transition: backround .2s ease-in;
+			}
+			.class_colorized .attendee_box[data-class-id="@{id}"] .attendee_name img { visibility: hidden; }
+			
+		}.is_color();
 		
-		// start of css
-		.attendee_box.class_@{id} {
-			background: url('games/@{eqdkpGame}/classes/@{id}.png') no-repeat scroll ~"12% 0% / 25px auto" transparent;
-			border: 1px solid fade(@color, 50);
-			box-shadow: 0px 0px 6px 6px fade(@color, 30) inset;
-		}
-		// end of css
+		.change_attendee_box(@i + 1);
+	}.change_attendee_box();
+	
+
+	//Guest Box
+	.change_guest_box(@i:1) when(@i <= length(@eqdkpGameClasses)){
+		@id		: extract(extract(@eqdkpGameClasses, @i), 1);
+		@name	: extract(extract(@eqdkpGameClasses, @i), 2);
+		@color	: extract(extract(@eqdkpGameClasses, @i), 3);
+		.is_color() when(iscolor(@color)){
+			
+			.class_colorized .guest_box[data-class-id="@{id}"] {
+				border: 1px solid fade(@color, 100);
+				box-shadow: 0px 0px 5px 5px fade(@color, 40) inset;
+				transition: backround .2s ease-in;
+			}
+			.class_colorized .guest_box[data-class-id="@{id}"] .guest_name img { visibility: hidden; }
+			
+		}.is_color();
 		
-	}.is_color();
-	.change_attendee_box(@i+1); //next class entry
+		.change_guest_box(@i + 1);
+	}.change_guest_box();
+	
 }
+.check_game_support();
 
 /* calendar: raidevent view - Not signed in Members Bar */
 .notsignedpanel {
@@ -2570,7 +2515,7 @@ color:#F0F
 	padding:15px;
 	margin-bottom: 12px;
 	box-shadow: 0 0 20px #999;
-	border-radius:2px;
+	border-radius:0px;
 }
 
 /* general: game specific */
