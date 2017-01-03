@@ -3747,15 +3747,16 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 
 	.nav-mobile > i {
-		background-color: #fff;
+		background-color: @eqdkpContainerBackgroundColor;
 		border-radius: 4px;
-		color: @templateMainColor0;
+		border: 1px solid @eqdkpContainerBorderColor;
+		color: @templateMainColor4;
 		padding: 4px 5px 2px 5px;
 		margin: 4px;
 		font-size: 22px;
 	}
 		.mobile-overlay {
-		display:none; position:fixed; top:0; left:0; bottom:0; right:0; max-width:100vw; z-index:500; background:@eqdkpContainerBackgroundColor; overflow-y:auto;
+		display:none; position:fixed; top:0; left:0; bottom:0; right:0; max-width:100vw; z-index:500; background:@eqdkpContentBackgroundColor; overflow-y:auto;
 
 		// Base Layout
 		.overlay-header				{ display:flex; justify-content:space-between; margin-bottom:10px; }
@@ -3774,12 +3775,13 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 			&-wrapper.open .heading	{ display:none; }
 
 			li:not(:last-child)		{ margin-bottom:1px; }
-			a						{ display: block; padding: 10px 30px; position: relative; font-size: 14px; color:@eqdkpContentLinkColor; background:lighten(@eqdkpContentBackgroundColor, 5); }
+			a						{ display: block; padding: 10px 30px; position: relative; font-size: 14px; color:@eqdkpContentLinkColor; background:@eqdkpMenuItemBackgroundColor; }
+			a:hover					{ background-color:lighten(@eqdkpMenuItemBackgroundColor,20); color: lighten(@eqdkpContentLinkColor,20);}
 
 			.sub-menu-arrow:after	{ content:'\f105'; display:block; font-family:'FontAwesome'; font-size:18px; color:@eqdkpContentLinkColor; position:absolute; right:18px; top:50%; transform:translateY(-50%); }
 			.sub-menu				{ display:none; width:100%; position:absolute; top:0; left:100%; bottom:0; right:0; }
 
-			.open > a				{ position:absolute; left:100%; bottom:calc(~'100% + 10px'); right:calc(~'-100% + 44px'); line-height:24px; z-index:999; }
+			.open > a				{ position:absolute; left:100%; bottom:calc(~'100% + 10px'); right:calc(~'-100% + 44px'); line-height:25px; z-index:999; }
 			.open > a:after			{ content:'\f104'; left:15px; right:unset; }
 			.open > .sub-menu		{ display:block; }
 		}
