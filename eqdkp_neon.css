@@ -1712,6 +1712,17 @@ ul.breadcrumb li.current  a{
 	padding-left: 15px;
 	border-left: 1px solid fadeout(@templateMainColor10,80);
 }
+.sortable li.mjs-nestedSortable-branch div, .sortable li.mjs-nestedSortable-leaf div {
+    background: @templateMainColor2;
+    border-color: @eqdkpInputBorderColor;
+}
+.sortable li.mjs-nestedSortable-branch div .fa-trash-o:before, .sortable li.mjs-nestedSortable-leaf div .fa-trash-o:before {
+    color: @eqdkpInputBorderColor;
+    padding-left: 10px;
+}
+.sortable li.mjs-nestedSortable-branch div .eye:before, .sortable li.mjs-nestedSortable-leaf div .eye:before {
+    color: #DDD;
+}
 
 /* ACP: admin menu - update available badge */
 .update_available {
