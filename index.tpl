@@ -377,6 +377,8 @@
 				<!-- LISTENER footer_top -->
 				<div class="portal_block2">{PORTAL_BLOCK2}</div>
 				{EQDKP_PLUS_COPYRIGHT}
+				<br>
+-			<div class="copyright">Based on design by <a target="new" rel="nofollow" href="http://www.avathar.be">PayBas @ PBWoW.com</a>. All other trademarks are the property of their respected owners.</div><br>
 				<!-- LISTENER footer_bottom -->
 		</footer><!-- close footer -->
 	</div><!-- close wrapper -->
