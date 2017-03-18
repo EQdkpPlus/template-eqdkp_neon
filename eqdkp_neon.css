@@ -677,7 +677,7 @@ ul.mainmenu li {
 	border-left: 1px solid #000; 
 	border-right: 1px solid #424242; 
 	transition: background .2s ease-out; 
-	background: @eqdkpMenuBackgroundColor;
+	background: fadeout(@eqdkpMenuBackgroundColor,90);
 	border-right: 1px solid lighten(@templateMainColor8,10);
 	border-left: 1px solid desaturate(@templateMainColor8, 10);
 	line-height: 14px;
@@ -768,7 +768,7 @@ ul.adminmenu {
 	
 ul.adminmenu li { 
 	position: relative; 
-	background: @eqdkpMenuBackgroundColor;
+	background: fadeout(@eqdkpMenuBackgroundColor,90);
 	border-right: 1px solid lighten(@templateMainColor8,10);
 	border-left: 1px solid desaturate(@templateMainColor8, 10);
 	transition: background .2s ease-out; }
@@ -4507,4 +4507,4 @@ label.isBoolean > input[type="radio"]:checked + span.green, label.isBoolean > sp
 .radioContainerBoolean, .radioContainer {
 	display: inline-block;
 }
-/* End Boolean Boxes */
+/* End Boolean Boxes 

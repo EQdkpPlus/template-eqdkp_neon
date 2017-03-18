@@ -44,7 +44,7 @@
 	<table_tr_background_color_hover>rgba(99, 79, 155, 0.25)</table_tr_background_color_hover>
 	<table_border_color>rgb(23, 32, 64)</table_border_color>
 	
-	<menu_background_color>rgba(133, 128, 132, 0)</menu_background_color>
+	<menu_background_color>#3B1F4E</menu_background_color>
 	<menu_font_color>rgb(236, 255, 255)</menu_font_color>
 	<menu_item_background_color>rgba(0, 0, 0, 0.8)</menu_item_background_color>
 	<menu_item_background_color_hover>rgba(0, 0, 0, 0.5)</menu_item_background_color_hover>
