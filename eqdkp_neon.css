@@ -4507,4 +4507,4 @@ label.isBoolean > input[type="radio"]:checked + span.green, label.isBoolean > sp
 .radioContainerBoolean, .radioContainer {
 	display: inline-block;
 }
-/* End Boolean Boxes 
+/* End Boolean Boxes */
