@@ -882,7 +882,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	font-family: Tahoma,Arial,Verdana,sans-serif;
 	margin: 3px;
 }
-
+select optgroup{background:darken(@eqdkpInputBackgroundColor,40);}
 select:focus, textarea:focus, input:focus {
 	border-color: @eqdkpInputBorderColorActive;
 	box-shadow: 0 1px 1px fadeout(@templateMainColor0,92.5) inset, 0 0 0px @eqdkpInputBorderColorActive;
@@ -1714,10 +1714,10 @@ ul.breadcrumb li.current  a{
 }
 .sortable li.mjs-nestedSortable-branch div, .sortable li.mjs-nestedSortable-leaf div {
     background: @templateMainColor2;
-    border-color: @eqdkpInputBorderColor;
+    border:1px solid @eqdkpInputBorderColorActive;;
 }
 .sortable li.mjs-nestedSortable-branch div .fa-trash-o:before, .sortable li.mjs-nestedSortable-leaf div .fa-trash-o:before {
-    color: @eqdkpInputBorderColor;
+    color: @eqdkpInputFontColor;
     padding-left: 10px;
 }
 .sortable li.mjs-nestedSortable-branch div .eye:before, .sortable li.mjs-nestedSortable-leaf div .eye:before {
@@ -2135,7 +2135,8 @@ ul.portal_block {
 input#selectmode + ul { 
 	position: relative; 
 	width: 160px; 
-	cursor: pointer; }
+	cursor: pointer;
+	color:@eqdkpInputFontColor; 	}
 input#selectmode + ul > li { 
 	padding: 8px 12px; 
 	background-color: @eqdkpInputBackgroundColor; 
