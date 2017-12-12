@@ -2357,7 +2357,7 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 	.attendee_box.char_edit	{ border:1px solid #ff9d55; }
 	.attendee_select		{ flex:0 0 22px; }
 	.attendee_name			{ flex:2 1 100%; color: @eqdkpContentFontColor; overflow:hidden; text-overflow:ellipsis; }
-	.attendee_name a		{ color:@eqdkpContentFontColor; overflow:hidden; text-overflow:ellipsis; vertical-align:middle; }
+	.attendee_name a		{ color: inherit; overflow:hidden; text-overflow:ellipsis; vertical-align:middle; }
 	.attendee_info			{ flex:1 0 auto; padding-right:3px; }
 	.attendee_info .fa-info	{ padding-right:5px; }
 
@@ -3559,6 +3559,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive #personalArea {
 		line-height: 22px;
 		font-size: 16px;
+		margin: 0;
 	}
 	.responsive #personalArea i{
 		line-height: 30px;
@@ -3739,7 +3740,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 
 	.responsive button.ui-multiselect {
-		width: auto !important;
+		width: 100% !important;
 	}
 
 	.responsive.simple-header.mobile .floatRight  {
@@ -3899,6 +3900,17 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	#bottommenu_admin, #bottommenu_chars{
 		width: 90% !important;
 	}
+	
+	.responsive .columnContainer::before {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	// relocate portal modules
+	.portal .columnContainer { display:flex; flex-flow:column nowrap; }
+	.portal .columnContainer .first.column { order:1; }
+	.portal .columnContainer .second.column { order:0; }
+	.portal .columnContainer .third.column { order:2; }
 }
 
 @media all and (max-width: 590px) {
@@ -4509,3 +4521,20 @@ label.isBoolean > input[type="radio"]:checked + span.green, label.isBoolean > sp
 	display: inline-block;
 }
 /* End Boolean Boxes */
+
+/* Iframe widget */
+body.module-iframe {
+	background: transparent;
+	margin: 0;
+}
+
+.module-iframe #contentBody, .module-iframe #contentBody2 {
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.module-iframe #plus_debug_tabs {
+	display: none;
+} 
