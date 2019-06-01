@@ -2099,9 +2099,12 @@ ul.portal_block {
 	display: none;
 }
 .fc-icons{
+	margin: 0;
 	margin-left: 4px;
 	margin-top:2px;
 	border: 0px;
+	border-right: 1px solid white;
+	margin-right: 4px;
 	display:block;
 	float:left;
 }
@@ -2110,10 +2113,33 @@ ul.portal_block {
 	margin-top:2px;
 	border: 0px;
 	display:block;
-	float:right;
+	float:left;
+	font-size:10px;
 }
+.fc-icons .fc-deadlinereached {
+	display: inline-block;
+	position: absolute; content: '';
+	width: 8px;
+	height: 100%;
+	left: 4px;
+	top: 2px;
+}	
 .fc-title{
 	vertical-align: middle;
+	padding-left: 4px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 11px;
+}
+.calendartt_raidgroups {
+	margin-top: 2px;
+	vertical-align: middle;
+}
+.calendartt_raidgroups .raidgroups_colorbox {
+	margin-left: 0px !important;
+	width: 12px;
+	height: 12px;
 }
 .fc-button-group .ui-corner-left {
 	border-radius: 0px;
@@ -2129,6 +2155,18 @@ ul.portal_block {
 }
 .fc-button-group button {
 	border-radius: 0em;
+}
+td.fc-event-container { position:relative; }
+.calendar_raid_private:after {
+	position:absolute;
+	top:-13px;
+	right:-13px;
+	transform:rotate(135deg);
+	content:'';
+	height:0;
+	width:0;
+	border:12px solid transparent;
+	border-right-color:gray;
 }
 /* add calendar event*/
 input#selectmode + ul { 
@@ -2205,6 +2243,13 @@ fieldset.settings.floatRight.raid input[type="text"]{
 }
 .calendar_redicon{
 	color: red;
+}
+.raidgroups_colorbox {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0px 4px 0 8px;
+	border: 1px solid rgba(0, 0, 0, .2);
 }
 .raidcal_name .toggle_button {
 	font-size: 13px;
@@ -3910,6 +3955,16 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.portal .columnContainer .first.column { order:1; }
 	.portal .columnContainer .second.column { order:0; }
 	.portal .columnContainer .third.column { order:2; }
+	
+	.notsignedpanel_close:before{
+		top: 10px;
+    		left: 10px;
+	}
+	.notsignedpanel {
+		overflow: scroll;
+		height: auto;
+		top: 0;
+	}
 }
 
 @media all and (max-width: 590px) {
@@ -3970,13 +4025,22 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		margin-right: 10px;
 	}
 
-	.list-type1 .ribbons, .list-type2 .ribbons, .list-type3 .ribbons  {
+	.list-type1 .ribbons, .list-type2 .ribbons, .list-type3 .ribbons, .list-type4 .ribbons  {
 		display: none;
 	}
 
 	#bottommenu_admin, #bottommenu_chars{
 		width: 98% !important;
 		height: 64px !important;
+	}
+	
+	.responsive .article-container.list-type4, .responsive .article-container.list-type4 .article-banner-image > a {
+		width: 100% !important;
+		margin-right: 0;
+	}
+
+ 	.responsive .article-container.list-type4 .article-banner-image a > img {
+		width: 100% !important;
 	}
 }
 
@@ -4273,7 +4337,7 @@ button.thirdpartylogin.discord {
 	width: 100px;
 }
 
-.list-type1 .td, .list-type2 .td, .list-type3 .td {
+.list-type1 .td, .list-type2 .td, .list-type3 .td, .list-type4 .td {
 	vertical-align: top;
 }
 
@@ -4283,6 +4347,35 @@ button.thirdpartylogin.discord {
 
 .list-type2 .fa-calendar-o, .list-type2 .fa-comments, .list-type2 .fa-folder-o {
 	margin-left: 10px;
+}
+
+.list-type4 {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+ .article-container.list-type4 {
+	width: 500px;
+	margin-right:20px;
+	background-color: @eqdkpContentContrastBackgroundColor;
+}
+
+ .list-type4 .article-banner-image {
+	align-items:center;
+	display:flex;
+	max-height:160px;
+	overflow:hidden;
+}
+
+ .list-type4 .news_author {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+ .list-type4 .article_content {
+	padding: 0px 10px 5px 10px;
 }
 /***************************************************
 /* Ribbons 
