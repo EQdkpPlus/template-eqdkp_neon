@@ -2955,7 +2955,7 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	max-height: 48px;
 }
 
-.user-avatar-small, .user-avatar-small img {
+.user-avatar-small, .user-avatar-small, .user-avatar.small {
 	max-height: 32px;
 }
 
@@ -2963,7 +2963,7 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	max-height: 24px;
 }
 
-.user-avatar-border img {
+img.user-avatar, .user-avatar img {
 	border: 1px solid fadeout(@templateMainColor10, 55);
 	border-radius: 4px 4px 4px 4px;
 	background-color: #FFFFFF;
