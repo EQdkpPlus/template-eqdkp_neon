@@ -4350,33 +4350,41 @@ button.thirdpartylogin.discord {
 }
 
 .list-type4 {
-	display:flex;
+	display:flex; 
 	flex-wrap: wrap;
 }
 
- .article-container.list-type4 {
-	width: 500px;
+.article-container.list-type4 {
+	width: 480px; 
 	margin-right:20px;
 	background-color: @eqdkpContentContrastBackgroundColor;
+	flex-grow: 1;
+	display: block;
 }
 
- .list-type4 .article-banner-image {
-	align-items:center;
-	display:flex;
-	max-height:160px;
+.list-type4 .article-banner-image {
 	overflow:hidden;
 }
 
- .list-type4 .news_author {
+.list-type4 .article-banner-image a {
+	display: block;
+	height: 160px;
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.list-type4 .news_author {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
 
- .list-type4 .article_content {
+.list-type4 .article_content {
 	padding: 0px 10px 5px 10px;
 }
+
 /***************************************************
 /* Ribbons 
  **************************************************/
